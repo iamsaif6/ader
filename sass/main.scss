@@ -1,0 +1,505 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  // overflow-x: hidden;
+}
+
+/*-- ===========================
+=========== Button ============
+=============================*/
+
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 2.8rem;
+  color: #fff;
+  padding: 0.8rem 3.5rem;
+  border: 1px solid #fff;
+  display: inline-block;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+  }
+}
+
+.btn__red {
+  background-color: #bf282d;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+/*-- ===========================
+=========== Top bar ============
+=============================*/
+
+.top__bar {
+  background-color: #bf282d;
+
+  &-text {
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding: 0.5rem 0;
+  }
+}
+
+/*-- ===========================
+=========== Nav bar ============
+=============================*/
+
+.navbar {
+  &-nav {
+    align-items: center;
+  }
+
+  background-color: rgba(255, 255, 255, 0.87);
+
+  &-brand {
+    padding: 2rem 0;
+    img {
+      max-width: 14rem;
+    }
+  }
+}
+
+.nav {
+  &-item {
+    &:not(:first-child) {
+      margin-left: 1.2rem;
+    }
+  }
+
+  &-link {
+    font-size: 2.4rem;
+    color: #000 !important;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+
+  &-mail {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #fff !important;
+    background-color: #bf282d;
+    border-radius: 10px;
+    padding: 1rem 1.5rem !important;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #000;
+    }
+  }
+}
+
+.dropdown-menu {
+  top: 170%;
+  min-width: 300px;
+  border: none;
+}
+
+// .dropdown-toggle::after{
+//     display: none;
+// }
+
+.dropdown-item {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  position: relative;
+
+  &:active,
+  &:hover {
+    background-color: #bf282d;
+    color: #fff;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 2px dashed #efefef;
+    margin-bottom: 3px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #b51437;
+    width: 3px;
+    height: 100%;
+    left: 3px;
+    top: 0;
+  }
+}
+
+/*-- ===========================
+=========== Header ============
+=============================*/
+
+.carousel-item {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.479)),
+    url(../img/header__bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.header {
+  // &__inner{
+  //     position: absolute;
+  //     width: 100%;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%,-50%);
+  // }
+
+  .carousel__header {
+    font-size: 5.4rem;
+    font-weight: 700;
+  }
+
+  .carousel__description {
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 30px 0 40px 0;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none;
+    font-size: 8rem;
+  }
+
+  // .carousel-control-prev{
+  //     left: -11rem;
+  // }
+  // .carousel-control-next{
+  //     right: -11rem;
+  // }
+
+  .carousel-control-prev span,
+  .carousel-control-next span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    i {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+    }
+  }
+}
+
+/*-- ===========================
+=========== Services Seciton ============
+=============================*/
+
+.services {
+  background-color: #bf282d;
+  padding: 2.6rem 0;
+
+  &__heading {
+    font-weight: 300;
+    font-size: 2.8rem;
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__name {
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  &__img {
+  }
+
+  &__form {
+    background-color: #e9e9e9;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  .form {
+    padding: 0 2rem;
+
+    &__header {
+      font-weight: 800;
+      font-size: 2.8rem;
+      color: #000;
+    }
+
+    &__description {
+      color: #606060;
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+
+    &-control {
+      &[type="text"],
+      &[type="email"] {
+        margin-bottom: 1rem;
+        color: #606060;
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 2rem 1rem;
+      }
+
+      &::placeholder {
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+}
+
+/*-- ===========================
+=========== Gsllery Seciton ============
+=============================*/
+
+.gallery {
+  padding: 5rem 0 3rem 0;
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #000000;
+    margin-bottom: 4rem;
+  }
+
+  &__single {
+    height: 200px;
+    position: relative;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    cursor: pointer;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
+      url(../img/gallery-1.jpg);
+
+    &--2 {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.22),
+          rgba(0, 0, 0, 0.22)
+        ),
+        url(../img/gallery-2.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.22),
+          rgba(0, 0, 0, 0.22)
+        ),
+        url(../img/gallery-3.jpg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.22),
+          rgba(0, 0, 0, 0.22)
+        ),
+        url(../img/gallery-4.jpg);
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: #000;
+      transition: 0.3s;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-size: 150%;
+      transition: all 0.3s;
+
+      &::after {
+        opacity: 0.5;
+      }
+    }
+
+    &__heading {
+      font-weight: 900;
+      color: #fff;
+      font-size: 2.8rem;
+      position: absolute;
+      bottom: 1.6rem;
+      left: 50%;
+      width: 100%;
+      text-align: center;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+  }
+}
+
+/*-- ===========================
+=========== Blog Seciton ============
+=============================*/
+
+.blog {
+  padding: 4rem 0;
+  background-color: #efefef;
+
+  &__header {
+    color: #242424;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  &__subheader {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    font-weight: 600;
+    margin-bottom: 6rem;
+  }
+
+  &__box {
+    text-align: left;
+  }
+
+  &__img {
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 1rem 0 1.7rem 0;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 500;
+    margin-top: 1.6rem;
+  }
+
+  &__description {
+    color: #242424;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.9rem;
+  }
+}
+
+/*-- ===========================
+=========== Footer Seciton ============
+=============================*/
+
+.footer {
+  background-color: #3e3f41;
+  padding: 3rem 0;
+
+  &__single {
+  }
+
+  &__title {
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.7rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #8b8b8d;
+    transition: all 0.3s;
+    display: inline-block;
+    padding: 0.4rem 0;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.footer__bottom {
+  padding: 4rem 0;
+  background-color: #dbdbdb;
+
+  &__text {
+    color: #000;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+}
+
+.social {
+  &__list {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    margin-right: 1.6rem;
+  }
+
+  &__link {
+    font-size: 2rem;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #bf282d;
+    }
+  }
+}
