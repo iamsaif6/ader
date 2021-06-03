@@ -11,7 +11,7 @@
  ### Get started (Make sure you have installed node.js)
  
  * Open Git Bash or VS code terminal on Default Folder
- * Enter ```npm install``` to install the require file for scss compiles.
+ * Enter `npm install` to install the require file for scss compiles.
  * Enter ```npm start``` to start the compiles.
 
 ## Tools and Technology Used :
@@ -21,6 +21,7 @@
 - CSS
 - HTML
 - JavaScript
+- NPM
 
 ### Check out my other project here : [https://iamsaif6.github.io](https://iamsaif6.github.io/ "Portfolio")
 
